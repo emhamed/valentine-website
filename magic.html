@@ -17,18 +17,27 @@
     }
     .magic-container {
       position: relative;
-      top: 40%;
-      transform: translateY(-50%);
+      top: 30%;
+      transform: translateY(-30%);
       color: #fff;
       z-index: 1;
     }
     h1 {
       font-size: 3rem;
       margin-bottom: 20px;
-      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
     p {
       font-size: 1.5rem;
+    }
+    /* Style for the GIF image */
+    .magic-gif {
+      max-width: 90%;
+      height: auto;
+      margin-top: 20px;
+      border: 5px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
     /* Confetti canvas style */
     #confettiCanvas {
@@ -44,6 +53,8 @@
   <div class="magic-container">
     <h1>You're My One and Only! 💖</h1>
     <p>Let the magic begin...</p>
+    <!-- GIF image to appear on the page -->
+    <img src="magic.gif" alt="Magical Celebration" class="magic-gif">
   </div>
   <canvas id="confettiCanvas"></canvas>
   <script>
