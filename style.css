@@ -59,11 +59,11 @@ button:hover {
 }
 
 /* Specific styling for the "No" button */
+/* Removed the relative positioning that was causing the overlap */
 .no-button {
   font-size: 1rem;
   background: #ff6b6b;
-  position: relative;
-  left: -200px;
+  margin: 10px;
 }
 
 /* A gentle sparkle animation for extra magic */
