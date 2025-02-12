@@ -1,45 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Be My Valentine</title>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>How was your day today?</h1>
-    <div class="options">
-      <button onclick="nextQuestion()">Good 😊</button>
-      <button onclick="nextQuestion()">Adoption of Good 🥰</button>
-      <button onclick="nextQuestion()">I Miss You 😢</button>
-    </div>
-    <div id="question2" class="hidden">
-      <h1>Will you be my Valentine? ❤️</h1>
-      <!-- Added extra horizontal margin for spacing -->
-      <button class="yes-button" onclick="sayYes()">Yes! 💖</button>
-      <button class="no-button" onclick="askAgain()">No... 😳</button>
-    </div>
-  </div>
+/* Apply a beautiful floral background image */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('red-flowers-floral-blur-background-flower-garden-blossom-5184x3456-4296.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f8f8f2;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+}
 
-  <audio id="background-music" autoplay loop>
-    <source src="Stromae, Pomme - “Ma Meilleure Ennemie” (from Arcane Season 2) [Official Visualizer] [ ezmp3.cc ].mp3" type="audio/mp3">
-  </audio>
+/* Create a soft overlay container for readability */
+.container {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  animation: sparkle 3s infinite ease-in-out;
+}
 
-  <script>
-    function nextQuestion() {
-      document.querySelector('.options').style.display = 'none';
-      document.getElementById('question2').classList.remove('hidden');
-    }
-    function sayYes() {
-      // Redirect to the magical page when she clicks "Yes!"
-      window.location.href = "magic.html";
-    }
-    function askAgain() {
-      alert("Hmm... think again! 😏");
-    }
-  </script>
-</body>
-</html>
+/* Add a glowing effect to headings */
+h1 {
+  font-size: 2.5rem;
+  color: #ffe0e9;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Style the buttons with a magical touch */
+button {
+  background: #ff6f91;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;  /* Default margin */
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: #ff9671;
+  transform: scale(1.05);
+}
+
+/* Hide elements by default */
+.hidden {
+  display: none;
+}
+
+/* Specific styling for the "Yes" button with extra right margin */
+.yes-button {
+  font-size: 1.5rem;
+  background: #6fdc97;
+  margin-right: 20px;
+}
+
+/* Specific styling for the "No" button with extra left margin */
+.no-button {
+  font-size: 1rem;
+  background: #ff6b6b;
+  margin-left: 20px;
+}
+
+/* A gentle sparkle animation for extra magic */
+@keyframes sparkle {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
