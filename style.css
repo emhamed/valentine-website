@@ -1,38 +1,74 @@
+/* Apply a beautiful floral background image */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #1b1f2e, #3c3f5e);
+  background: url('flowers-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #f8f8f2;
   text-align: center;
   padding: 50px;
+  margin: 0;
 }
+
+/* Create a soft overlay container for readability */
+.container {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  animation: sparkle 3s infinite ease-in-out;
+}
+
+/* Add a glowing effect to headings */
 h1 {
   font-size: 2.5rem;
-  color: #e1c4ff;
+  color: #ffe0e9;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
+
+/* Style the buttons with a magical touch */
 button {
-  background: #8b5cf6;
+  background: #ff6f91;
   color: white;
   border: none;
   padding: 15px 30px;
   margin: 10px;
-  border-radius: 8px;
+  border-radius: 50px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
 button:hover {
-  background: #7c3aed;
+  background: #ff9671;
+  transform: scale(1.05);
 }
+
+/* Hide elements by default */
 .hidden {
   display: none;
 }
+
+/* Specific styling for the "Yes" button */
 .yes-button {
   font-size: 1.5rem;
-  background: #34d399;
+  background: #6fdc97;
 }
+
+/* Specific styling for the "No" button */
 .no-button {
   font-size: 1rem;
-  background: #f87171;
+  background: #ff6b6b;
   position: relative;
   left: -200px;
+}
+
+/* A gentle sparkle animation for extra magic */
+@keyframes sparkle {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
 }
