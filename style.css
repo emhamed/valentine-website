@@ -34,7 +34,7 @@ button {
   color: white;
   border: none;
   padding: 15px 30px;
-  margin: 10px;
+  margin: 10px;  /* Default margin */
   border-radius: 50px;
   font-size: 1.2rem;
   cursor: pointer;
@@ -52,18 +52,18 @@ button:hover {
   display: none;
 }
 
-/* Specific styling for the "Yes" button */
+/* Specific styling for the "Yes" button with extra right margin */
 .yes-button {
   font-size: 1.5rem;
   background: #6fdc97;
+  margin-right: 20px;
 }
 
-/* Specific styling for the "No" button */
-/* Removed the relative positioning that was causing the overlap */
+/* Specific styling for the "No" button with extra left margin */
 .no-button {
   font-size: 1rem;
   background: #ff6b6b;
-  margin: 10px;
+  margin-left: 20px;
 }
 
 /* A gentle sparkle animation for extra magic */
